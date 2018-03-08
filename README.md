@@ -4,7 +4,7 @@ freemarker taglibs starter for spring boot
 ### 说明
 
 
- > 基于 spring-boot-starter-freemarker 的 Spring Boot Starter 扩展
+ > 基于 spring-boot-starter-freemarker 的 Spring Boot Starter 扩展 
 
 1. 整合增加标签库加载逻辑
 2. 
