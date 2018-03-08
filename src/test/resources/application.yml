@@ -1,0 +1,49 @@
+server:
+  port: 7900
+
+spring:
+  freemarker: 
+    #是否允许mvc使用freemarker.
+    enabled: true
+    #设定Template的编码.
+    charset: UTF-8
+    #是否开启template caching.
+    cache: false
+    #设定Content-Type.
+    content-type: text/html; charset=utf-8
+    #指定HttpServletRequest的属性是否可以覆盖controller的model的同名项
+    allow-request-override: false
+    #指定HttpSession的属性是否可以覆盖controller的model的同名项
+    allow-session-override: false
+    #设定所有request的属性在merge到模板的时候，是否要都添加到model中.
+    expose-request-attributes: false
+    #设定所有HttpSession的属性在merge到模板的时候，是否要都添加到model中.
+    expose-session-attributes: true
+    #设定是否以springMacroRequestContext的形式暴露RequestContext给Spring’s macro library使用
+    expose-spring-macro-helpers: true
+    #是否优先从文件系统加载template，以支持热加载，默认为true; 设置为false时才可从其他jar包中加载指定模板路径下的模板文件
+    prefer-file-system-access: false
+    #指定RequestContext属性的名.
+    request-context-attribute: request
+    #是否检查templates路径是否存在.
+    check-template-location: true
+    #设定模板的加载路径，多个以逗号分隔，默认: ["classpath:/templates/"]
+    template-loader-path: 
+    - classpath:/templates
+    #设定freemarker模板的前缀.
+    #prefix: 
+    #设定模板的后缀.
+    suffix: .ftl
+    settings:
+      defaultEncoding : UTF-8
+      url_escaping_charset: UTF-8
+      locale: zh_CN
+      template_update_delay: 1
+      tag_syntax: auto_detect
+      whitespace_stripping: true
+      classic_compatible: true
+      object_wrapper: freemarker.ext.beans.BeansWrapper
+      templateExceptionHandler : ignore
+    taglibs:
+      class-path-tlds:
+      - /META-INF/taglib.tld
