@@ -14,7 +14,7 @@ Spring Boot Starter For Freemarker Taglibs
 ``` xml
 <dependency>
 	<groupId>${project.groupId}</groupId>
-	<artifactId>spring-boot-starter-freemarker-taglibs</artifactId>
+	<artifactId>freemarker-taglibs-spring-boot-starter</artifactId>
 	<version>${project.version}</version>
 </dependency>
 ```
