@@ -1,5 +1,5 @@
-# spring-boot-starter-freemarker-taglibs
-freemarker taglibs starter for spring boot
+# freemarker-taglibs-spring-boot-starter
+Spring Boot Starter For Freemarker Taglibs
 
 ### 说明
 
