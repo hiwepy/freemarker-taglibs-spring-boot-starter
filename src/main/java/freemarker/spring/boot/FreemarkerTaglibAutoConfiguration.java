@@ -15,12 +15,18 @@ import org.springframework.util.CollectionUtils;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 
 /**
- * 
- * @className	： FreemarkerTaglibAutoConfiguration
- * @description	： TODO(描述这个类的作用)
+ * Spring Boot auto-configuration that registers JSP tag-library descriptor (TLD)
+ * locations with the FreeMarker {@code TaglibFactory}.
+ * <p>
+ * Activates after Spring Boot's built-in {@code FreeMarkerAutoConfiguration},
+ * only when a {@link FreeMarkerConfigurer} bean exists and
+ * {@code spring.freemarker.enabled=true}. The configured classpath TLDs are
+ * applied to the shared tag library factory so FreeMarker templates can use
+ * JSTL-style tags through the FreeMarker/Spring taglib bridge.
+ * </p>
+ *
  * @author [@Loong Wan](https://github.com/loong10k)
- * @date		： 2018年3月8日 上午10:34:09
- * @version 	V1.0
+ * @since 1.0.0
  */
 @Configuration
 @ConditionalOnClass({ freemarker.template.Configuration.class, FreeMarkerConfigurer.class })
@@ -35,6 +41,11 @@ public class FreemarkerTaglibAutoConfiguration {
 	@Autowired
 	private FreeMarkerConfigurer freeMarkerConfigurer;
 
+	/**
+	 * Registers the classpath TLDs declared through {@link FreemarkerTaglibProperties}
+	 * with the FreeMarker {@code TaglibFactory}, making them resolvable by templates.
+	 * <p>No-op when no TLDs are configured.</p>
+	 */
 	@PostConstruct
 	public void loadClassPathTlds() {
 
