@@ -25,14 +25,14 @@ import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
  * JSTL-style tags through the FreeMarker/Spring taglib bridge.
  * </p>
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 @Configuration
 @ConditionalOnClass({ freemarker.template.Configuration.class, FreeMarkerConfigurer.class })
 @ConditionalOnBean({ FreeMarkerConfigurer.class })
 @ConditionalOnProperty(prefix = "spring.freemarker", value = "enabled", havingValue = "true")
-@AutoConfigureAfter({ org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration.class })
+@AutoConfigureAfter({ org.springframework.boot.freemarker.autoconfigure.FreeMarkerAutoConfiguration.class })
 @EnableConfigurationProperties({ FreemarkerTaglibProperties.class })
 public class FreemarkerTaglibAutoConfiguration {
 

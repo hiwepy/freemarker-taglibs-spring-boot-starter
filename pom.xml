@@ -523,6 +523,13 @@
             <artifactId>spring-webmvc</artifactId>
         </dependency>
         
+        <!-- For Servlet Api -->
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <scope>test</scope>
+        </dependency>
+
         <!-- For Spring Boot Test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
