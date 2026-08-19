@@ -34,6 +34,11 @@ import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 @ConditionalOnProperty(prefix = "spring.freemarker", value = "enabled", havingValue = "true")
 @AutoConfigureAfter({ org.springframework.boot.freemarker.autoconfigure.FreeMarkerAutoConfiguration.class })
 @EnableConfigurationProperties({ FreemarkerTaglibProperties.class })
+/**
+ * <p>Auto-configuration for FreemarkerTaglibAutoConfiguration.</p>
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 public class FreemarkerTaglibAutoConfiguration {
 
 	@Autowired
@@ -47,6 +52,9 @@ public class FreemarkerTaglibAutoConfiguration {
 	 * <p>No-op when no TLDs are configured.</p>
 	 */
 	@PostConstruct
+	/**
+	 * <p>Load class path tlds.</p>
+	 */
 	public void loadClassPathTlds() {
 
 		List<String> classPathTlds = properties.getClassPathTlds();

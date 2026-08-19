@@ -18,6 +18,11 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  */
 @SuppressWarnings("unchecked")
 @ConfigurationProperties(FreemarkerTaglibProperties.PREFIX)
+/**
+ * <p>Auto-configuration for FreemarkerTaglibProperties.</p>
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 public class FreemarkerTaglibProperties {
 
 	/**
